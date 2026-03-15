@@ -83,11 +83,13 @@ border: 1px solid #444;
 
 .filter-container {
   display: flex;
-  justify-content: center;
+  justify-content: space-around;
   margin-bottom: 2rem;
-  
+  align-items: center;
 }
-
+.filter-container p{
+  color: var(--text-muted);
+}
 .filter-container select {
   padding: 0.5rem 1rem;
   background: var(--bg-light-dark);
@@ -171,14 +173,33 @@ border: 1px solid #444;
 }
 
 @media (max-width: 500px) {
-  .top-bar {
-    flex-direction: column;
+  .mp-header {
+    flex-direction: row;
     gap: 1rem;
-    align-items: flex-start;
+    align-items: center;
+  }
+  .logo{
+    font-size: 25px;
+    margin-left: -22px;
+  }
+  .search-bar{
+    width: 100px;
+    margin: 5px;
+  }
+  .search-btn{
+    height: 30px;
+    width:55px;
+    margin-top: 5px;
   }
 
   .filter-container {
-    justify-content: flex-start;
+    justify-content: space-around;
+    display: flex;
+    align-items: center;
+    
+  }
+  .movies-container{
+    justify-content: center;
   }
   .error-text {
     font-size: large;

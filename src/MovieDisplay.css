@@ -30,7 +30,8 @@
   cursor: pointer;
   z-index: 20;
 }
-.md-back-btn:hover{
+
+.md-back-btn:hover {
   opacity: 0.8;
   transition: 0.2s ease-in-out;
 }
@@ -58,18 +59,20 @@
 }
 
 /* ===== HERO CONTENT ===== */
-.placeholder{
+.placeholder {
 
   padding: 2rem;
   background: transparent;
   border-radius: 7px;
   box-shadow: 2px 2px 4px rgb(53, 51, 51);
 }
-.placeholder:hover{
+
+.placeholder:hover {
   transform: translateY(-8px);
   border: 1px solid goldenrod;
   transition: 0.5s ease-out;
 }
+
 .md-hero-content {
   position: absolute;
   bottom: 15%;
@@ -102,11 +105,13 @@
   border-radius: 5px;
   cursor: pointer;
 }
-.md-play-btn:hover{
+
+.md-play-btn:hover {
   background-color: #ddd;
   color: black;
   transition: 0.2s ease-in-out;
 }
+
 /* ===== TRAILER OVERLAY ===== */
 
 .md-trailer-overlay {
@@ -138,15 +143,17 @@
   flex-direction: column;
   gap: 10px;
 }
-.md-error img{
+
+.md-error img {
   height: 100px;
 }
-.md-error p{
+
+.md-error p {
   color: gray;
 }
 
 /*Online Status*/
-.online-status{
+.online-status {
   display: flex;
   flex-direction: column;
   align-items: center;
@@ -154,26 +161,30 @@
   color: var(--md-text-muted);
   font-weight: 600;
 }
+
 /*======Loader====*/
-.md-loader{
+.md-loader {
   display: flex;
   justify-content: center;
   align-items: center;
-  margin-top: 16.5rem;
+ margin-top: 17%;
 }
-#loader{
+
+#loader {
   height: 150px;
   width: 150px;
   border-radius: 50%;
   border: 3px solid #ddd;
   border-top-color: red;
-  animation: rotate 1.5s infinite;  
+  animation: rotate 1.5s infinite;
 }
-@keyframes rotate{
-  100%{
+
+@keyframes rotate {
+  100% {
     rotate: 360deg;
   }
 }
+
 /* =============================== */
 /* 📱 RESPONSIVE */
 /* =============================== */
@@ -196,22 +207,27 @@
     width: 90%;
     height: 50%;
   }
-}
-.md-loader{
-  margin-top: 55%;
-}
-.md-error{
+
+
+.md-loader {
   margin-top: 50%;
 }
 
+.md-error {
+  margin-top: 50%;
+}
 
+}
 @media (max-width: 500px) {
   .md-hero {
     height: 100vh;
+    width: 100vw;
   }
-.md-error{
-  margin-top: 70%;
-}
+
+  .md-error {
+    margin-top: 70%;
+  }
+
   .md-title {
     font-size: 1.5rem;
   }
@@ -219,15 +235,18 @@
   .md-overview {
     font-size: 0.85rem;
   }
-.md-hero-content{
-  width: 300px;
-}
+
+  .md-hero-content {
+    width: 300px;
+  }
+
   .md-play-btn {
     width: 50%;
     bottom: 5;
   }
-  .md-loader{
-    margin-top: 85%;
+
+  .md-loader {
+    margin-top: 78%;
   }
-  
+.
 }

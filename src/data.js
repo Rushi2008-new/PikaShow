@@ -46,7 +46,7 @@ export const options = {
   method: 'GET',
   headers: {
     accept: 'application/json',
-    Authorization: "Bearer eyJhbGciOiJIUzI1NiJ9.eyJhdWQiOiJlOTQ2ZTE0MzYwMjFjMWRjYjcxYTI3OTA3ZTc2MDI3OSIsIm5iZiI6MTc3Mjg2MzYzOS40NzksInN1YiI6IjY5YWJjMDk3NjA4NzY5NDhhNzhmYWZkZiIsInNjb3BlcyI6WyJhcGlfcmVhZCJdLCJ2ZXJzaW9uIjoxfQ.tzr1MOTyeoJb5gV823ifeFVpcT1EkGmXHL5pj0pdxtg",
-  }
+    Authorization: `Bearer ${import.meta.env.VITE_API_KEY}`,
+  },
 };
 

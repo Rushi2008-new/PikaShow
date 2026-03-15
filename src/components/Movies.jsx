@@ -54,7 +54,15 @@ const Movies = () => {
       setFilteredMovies(updated);
     }
   };
-
+  const handleSearchEngine = (movie) => {
+    const val = movie.target.value;
+    const results = movies.filter(function(movie){
+      
+      return movie.original_title.toLowerCase().includes(val.toLowerCase());
+    })
+  
+    setFilteredMovies(results)
+  }
   return (
     <div>
       {/* 🔹 Top Row */}
@@ -63,13 +71,13 @@ const Movies = () => {
           {language === 'Hindi' ? 'पिकाशो' : 'PikaShow'}
         </h2>
         <div className='search'>
-    <input type='search' placeholder='Search for movies..' className='search-bar'/>
+    <input type='search' placeholder='Search for movies..' className='search-bar' onChange={handleSearchEngine}/>
     <input type='button' className='search-btn' value="Search"/>
     </div>
     
-        <button className="back-btn" onClick={() => navigate('/')}>
-           {language === 'Hindi' ? '← होम पर वापस जाएं' : '← Back To Home'}
-        </button>
+        <input type='button' className="back-btn" onClick={() => navigate('/')}
+         value =  {language === 'Hindi' ? '← होम पर वापस जाएं' : '← Back'}/>
+        
       </div>
       <div className="movies-page">
         {/* 🔹 Filter Row */}
@@ -86,6 +94,7 @@ const Movies = () => {
             <option value="7">7+</option>
             <option value="8">8+</option>
           </select>
+          <p> {filteredMovies.length} results found</p>
         </div>
 
         {/* 🔹 Loading Shimmer */}
