@@ -54,6 +54,7 @@ header {
   font-size: 1.8rem;
   font-weight: bold;
   color: var(--primary-color);
+  font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif
 }
 
 .nav {
@@ -62,8 +63,7 @@ header {
   gap: 1rem;
 }
 
-.nav select,
-.nav input {
+.nav select {
   padding: 0.5rem 0.8rem;
   border-radius: 6px;
   border: 1px solid #444;
@@ -72,11 +72,6 @@ header {
   outline: none;
 }
 
-.nav input {
-  width: 200px;
-}
-
-.nav input:focus,
 .nav select:focus {
   border-color: var(--primary-color);
 }
@@ -88,9 +83,11 @@ header {
   background-color: var(--primary-color);
   color: white;
   font-weight: bold;
+  text-decoration: none;
 }
 .login:hover{
   opacity: 0.8;
+  transition: 0.2s ease-in-out;
 }
 
 /* ===== HERO CONTENT ===== */
@@ -171,9 +168,7 @@ header {
     font-size: 2rem;
   }
 
-  .nav input {
-    width: 150px;
-  }
+
 }
 
 @media (max-width: 500px) {
@@ -190,9 +185,6 @@ header {
     justify-content: space-between;
   }
 
-  .nav input {
-    width: 100%;
-  }
 
   .hero-content {
     width: 90%;

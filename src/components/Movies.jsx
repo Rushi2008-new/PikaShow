@@ -2,6 +2,7 @@ import { useEffect, useState, useContext } from 'react';
 import { useParams, useNavigate } from 'react-router-dom';
 import { options, url } from '../data';
 import { Link } from 'react-router-dom';
+import LanguageContext from '../contexts/LanguageContext';
 
 
 const Movies = () => {
@@ -13,6 +14,7 @@ const Movies = () => {
   const [loading, setLoading] = useState(false);
   const [error, setError] = useState('');
   const [rating, setRating] = useState(0);
+    const  {language} = useContext(LanguageContext);
 
   const fetchMovies = async () => {
     try {
@@ -58,11 +60,15 @@ const Movies = () => {
       {/* 🔹 Top Row */}
       <div className="mp-header">
         <h2 className="logo" onClick={() => navigate('/')}>
-          PikaShow
+          {language === 'Hindi' ? 'पिकाशो' : 'PikaShow'}
         </h2>
-
+        <div className='search'>
+    <input type='search' placeholder='Search for movies..' className='search-bar'/>
+    <input type='button' className='search-btn' value="Search"/>
+    </div>
+    
         <button className="back-btn" onClick={() => navigate('/')}>
-          &#8592; Back
+           {language === 'Hindi' ? '← होम पर वापस जाएं' : '← Back To Home'}
         </button>
       </div>
       <div className="movies-page">
@@ -73,7 +79,7 @@ const Movies = () => {
             onChange={(e) => handleFilter(Number(e.target.value))}
           >
             <option value="0">
-              All Ratings
+               {language === 'Hindi' ? 'सभी रेटिंग' : 'All Ratings'}
             </option>
             <option value="5">5+</option>
             <option value="6">6+</option>

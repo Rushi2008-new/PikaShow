@@ -1,0 +1,233 @@
+:root {
+  --md-primary: #e50914;
+  --md-bg-dark: #000;
+  --md-text-light: #fff;
+  --md-text-muted: #aaa;
+}
+
+/* =============================== */
+/* 🎬 MOVIE DISPLAY PAGE */
+/* =============================== */
+
+.md-page {
+  background: var(--md-bg-dark);
+  color: var(--md-text-light);
+  height: 100vh;
+  position: relative;
+}
+
+/* ===== BACK BUTTON ===== */
+
+.md-back-btn {
+  position: fixed;
+  top: 20px;
+  right: 30px;
+  background: var(--md-primary);
+  color: var(--md-text-light);
+  border: none;
+  padding: 8px 16px;
+  border-radius: 5px;
+  cursor: pointer;
+  z-index: 20;
+}
+.md-back-btn:hover{
+  opacity: 0.8;
+  transition: 0.2s ease-in-out;
+}
+
+/* ===== HERO ===== */
+
+.md-hero {
+  height: 100vh;
+  background-size: cover;
+  background-position: center;
+  position: relative;
+  opacity: 1;
+}
+
+/* SIMPLE OVERLAY */
+
+.md-hero::after {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(0, 0, 0, 0.2);
+}
+
+/* ===== HERO CONTENT ===== */
+.placeholder{
+
+  padding: 2rem;
+  background: transparent;
+  border-radius: 7px;
+  box-shadow: 2px 2px 4px rgb(53, 51, 51);
+}
+.placeholder:hover{
+  transform: translateY(-8px);
+  border: 1px solid goldenrod;
+  transition: 0.5s ease-out;
+}
+.md-hero-content {
+  position: absolute;
+  bottom: 15%;
+  left: 5%;
+  max-width: 600px;
+  z-index: 2;
+}
+
+.md-title {
+  font-size: 3rem;
+  margin-bottom: 1rem;
+  color: bisque;
+}
+
+.md-overview {
+  color: white;
+  line-height: 1.5;
+  font-size: 1rem;
+}
+
+/* ===== PLAY BUTTON ===== */
+
+.md-play-btn {
+  margin-top: 1.5rem;
+  padding: 10px 24px;
+  background: var(--md-primary);
+  border: none;
+  color: var(--md-text-light);
+  font-size: 1rem;
+  border-radius: 5px;
+  cursor: pointer;
+}
+.md-play-btn:hover{
+  background-color: #ddd;
+  color: black;
+  transition: 0.2s ease-in-out;
+}
+/* ===== TRAILER OVERLAY ===== */
+
+.md-trailer-overlay {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(0, 0, 0, 0.3);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  z-index: 100;
+}
+
+.md-trailer-overlay iframe {
+  width: 80%;
+  height: 60%;
+  border: 1px solid var(--md-primary);
+}
+
+/* ===== ERROR ===== */
+
+.md-error {
+  display: flex;
+  justify-content: center;
+  margin-top: 20%;
+  align-items: center;
+  flex-direction: column;
+  gap: 10px;
+}
+.md-error img{
+  height: 100px;
+}
+.md-error p{
+  color: gray;
+}
+
+/*Online Status*/
+.online-status{
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin-top: 65%;
+  color: var(--md-text-muted);
+  font-weight: 600;
+}
+/*======Loader====*/
+.md-loader{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-top: 16.5rem;
+}
+#loader{
+  height: 150px;
+  width: 150px;
+  border-radius: 50%;
+  border: 3px solid #ddd;
+  border-top-color: red;
+  animation: rotate 1.5s infinite;  
+}
+@keyframes rotate{
+  100%{
+    rotate: 360deg;
+  }
+}
+/* =============================== */
+/* 📱 RESPONSIVE */
+/* =============================== */
+
+@media (max-width: 768px) {
+  .md-hero {
+    height: 85vh;
+  }
+
+  .md-hero-content {
+    left: 4%;
+    bottom: 12%;
+  }
+
+  .md-title {
+    font-size: 2rem;
+  }
+
+  .md-trailer-overlay iframe {
+    width: 90%;
+    height: 50%;
+  }
+}
+.md-loader{
+  margin-top: 55%;
+}
+.md-error{
+  margin-top: 50%;
+}
+
+
+@media (max-width: 500px) {
+  .md-hero {
+    height: 100vh;
+  }
+.md-error{
+  margin-top: 70%;
+}
+  .md-title {
+    font-size: 1.5rem;
+  }
+
+  .md-overview {
+    font-size: 0.85rem;
+  }
+.md-hero-content{
+  width: 300px;
+}
+  .md-play-btn {
+    width: 50%;
+    bottom: 5;
+  }
+  .md-loader{
+    margin-top: 85%;
+  }
+  
+}

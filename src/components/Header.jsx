@@ -1,19 +1,23 @@
+import { Link } from "react-router-dom";
+import { useContext } from 'react';
+import LanguageContext from '../contexts/LanguageContext';
+
 const Header = () => {
+    const {language, setLanguage}  = useContext(LanguageContext);
     return (
         <header>
             <div className="header">
-                <h2>PikaShow</h2>
+                <h2>{language === 'Hindi' ? 'पिकाशो' : 'PikaShow'}</h2>
                 <nav className="nav">
-                    <select>
-                        <option value="">Select Language</option>
-                        <option value="Hindi">Hindi</option>
+                    <select value={language} onChange={(e)=>setLanguage(e.target.value)}>
+                        <option value=""> {language === 'Hindi' ? 'भाषा चुनें' : 'Select Language'}</option>
                         <option value="English">English</option>
+                        <option value="Hindi">हिंदी</option>
                     </select>
-                    <input type="search"/>
-                    <button className="login">Login</button>
+                    <Link to={`/login`} className="login">Login</Link>
                 </nav>
             </div>
         </header>
     );
 };
-export default Header
+export default Header;

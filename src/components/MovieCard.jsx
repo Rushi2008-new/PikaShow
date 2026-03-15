@@ -1,5 +1,6 @@
 import { Link } from 'react-router';
-const MovieCard = ({ title, image, category }) => {
+const MovieCard = ({ title, image, category}) => {
+
   return (
     <div className="card">
       <Link to={`/movies/${category}`}>
@@ -7,6 +8,7 @@ const MovieCard = ({ title, image, category }) => {
         <img src={image} alt={title} />
       </Link>
       <h3>{title}</h3>
+
     </div>
   );
 };
