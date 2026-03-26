@@ -71,7 +71,7 @@ const Movies = () => {
           {language === 'Hindi' ? 'पिकाशो' : 'PikaShow'}
         </h2>
         <div className='search'>
-    <input type='search' placeholder='Search for movies..' className='search-bar' onChange={handleSearchEngine}/>
+    <input type='search' placeholder='Search Movies' className='search-bar' onChange={handleSearchEngine}/>
     <input type='button' className='search-btn' value="Search"/>
     </div>
     
