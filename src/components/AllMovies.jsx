@@ -83,7 +83,7 @@ const AllMovies = () => {
          value =  {language === 'Hindi' ? '← होम पर वापस जाएं' : '← Back'}/>
         
       </div>
-           {loading && <p className="loading-text">PikaShow</p>}
+           {loading && <p className="loader-text">PikaShow</p>}
            {error && <div>{error}</div>}
 
            {!loading && !error && (
