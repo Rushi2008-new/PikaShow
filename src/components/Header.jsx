@@ -14,7 +14,6 @@ const Header = () => {
                         <option value="English">English</option>
                         <option value="Hindi">हिंदी</option>
                     </select>
-                    <Link to={`/login`} className="login">Login</Link>
                 </nav>
             </div>
         </header>

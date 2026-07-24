@@ -75,20 +75,7 @@ header {
 .nav select:focus {
   border-color: var(--primary-color);
 }
-.login{
-  padding: 6px 10px;
-  margin-left: 0.8rem;
-  border: none;
-  border-radius: 50px;
-  background-color: var(--primary-color);
-  color: white;
-  font-weight: bold;
-  text-decoration: none;
-}
-.login:hover{
-  opacity: 0.8;
-  transition: 0.2s ease-in-out;
-}
+
 
 /* ===== HERO CONTENT ===== */
 
