@@ -11,7 +11,7 @@ PikaShow is a modern front-end project that lets users explore movie collections
 - Movie search and rating filters
 - Detail view with background hero, overview, and video trailer support
 - Language toggle between English and Hindi
-- Offline detection for improved user experience
+- Offline detection for improved user experience- **Note**: If network speed is slow, use a VPN for reliable TMDB API access
 
 ## ✨ Key Features
 
