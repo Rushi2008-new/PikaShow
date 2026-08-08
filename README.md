@@ -47,4 +47,12 @@ PikaShow is a modern front-end project that lets users explore movie collections
 
 
 
+---
+
+## 🚀 LIVE PROJECT
+
+Visit the live deployment:
+
+[https://pika-show.vercel.app](https://pika-show.vercel.app)
+
 Made for a polished movie browsing experience with multilingual UI and TMDB-powered data.
